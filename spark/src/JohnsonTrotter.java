@@ -9,11 +9,11 @@ import java.util.List;
  */
 public class JohnsonTrotter {	
     public static void perm(int N, List<String> list) {  
-		// permutation 	
+        // permutation 	
         int[] p = new int[N]; 
-		// inverse permutation    
+        // inverse permutation    
         int[] pi  = new int[N];
-		// direction = +1 or -1     
+        // direction = +1 or -1     
         int[] dir = new int[N];     
         for (int i = 0; i < N; i++) {
             dir[i] = -1;
@@ -24,18 +24,18 @@ public class JohnsonTrotter {
         perm(0, p, pi, dir, list);
     }
 
-    public static void perm(int n, int[] p, int[] pi, int[] dir, List<String> list) { 		
+    public static void perm(int n, int[] p, int[] pi, int[] dir, List<String> list) { 
         // base case - print out permutation
         if (n >= p.length) {
             for (int i = 0; i < p.length; i++) {            	
-            	// write to file					
-				if (i != p.length - 1) {
-					String str = (p[i] + 1) + ", ";
-					list.add(str);
-				} else {
-					String str = (p[i] + 1) + "\n";
-					list.add(str);
-				}
+                // write to file					
+                if (i != p.length - 1) {
+                    String str = (p[i] + 1) + ", ";
+                    list.add(str);
+                } else {
+                    String str = (p[i] + 1) + "\n";
+                    list.add(str);
+                }
             }                
             return;
         }

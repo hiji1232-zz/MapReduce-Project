@@ -25,17 +25,17 @@ public class JohnsonTrotter {
         if (n >= p.length) {
             for (int i = 0; i < p.length; i++) {         	
             	try {
-                    // write to file					
-				    if (i != p.length - 1) {
-				       String str = (p[i] + 1) + ", ";
-				       writer.write(str);
-				    } else {
-				       String str = (p[i] + 1) + "\n";
-				       writer.write(str);	
-				    }										
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+                    // write to file
+                    if (i != p.length - 1) {
+                        String str = (p[i] + 1) + ", ";
+                        writer.write(str);
+                    } else {
+                        String str = (p[i] + 1) + "\n";
+                       writer.write(str);	
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }              
             return;
         }
